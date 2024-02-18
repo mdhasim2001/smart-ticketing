@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:wght@500&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.raleway-font{
+    font-family: "Raleway", sans-serif;
+}
+
+.inter-font{
+    font-family: "Inter", sans-serif;
+}
