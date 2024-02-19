@@ -76,11 +76,10 @@
                                     P Paribahan
                                 </span>
                             </h1>
-                            <p class="mb-5 text-white inter-font">Provident cupiditate voluptatem et in. Quaerat fugiat
-                                ut
-                                assumenda
-                                excepturi
-                                exercitationem quasi. <br> In deleniti eaque aut repudiandae et a id nisi.</p>
+                            <p class="mb-5 text-white inter-font">
+                                Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi
+                                exercitationem quasi. <br> In deleniti eaque aut repudiandae et a id nisi.
+                            </p>
                             <button class="px-5 py-3 rounded-lg text-black bg-[#1DD100] raleway-font">Buy
                                 Tickets</button>
                         </div>
@@ -155,7 +154,7 @@
                 <!-- total seat  -->
                 <section class=" bg-white lg:flex gap-10 rounded-[20px]">
 
-                    <div class="lg:w-3/4 ">
+                    <div class="lg:w-3/4 p-5 ">
 
                         <div class=" lg:flex justify-between items-center py-10 lg:pl-10">
                             <div class="flex">
@@ -195,8 +194,6 @@
 
                     </div>
 
-                    <!-- <div><img class=" sm:hidden lg:h-full" src="images/info-devider.png" alt=""></div> -->
-
                     <div class="flex items-center justify-center w-full lg:w-1/4">
                         <div>
                             <img src="images/fare.png" alt="">
@@ -231,7 +228,7 @@
                             <button class=" py-2 px-5 lg:px-10 rounded-lg bg-[#0307124D]">Dr</button>
                         </div>
 
-                        <div>
+                        <div id="bus-seat">
                             <div class="flex items-center justify-center">
                                 <p class="mr-5 lg:mr-10">A</p>
                                 <div class="grid grid-cols-2 gap-8 lg:gap-20 my-5">
@@ -243,7 +240,6 @@
                                         <button class="bus-set py-2 px-5 lg:px-10 rounded-lg bg-[#0307124D]">A3</button>
                                         <button class="bus-set py-2 px-5 lg:px-10 rounded-lg bg-[#0307124D]">A4</button>
                                     </div>
-
                                 </div>
                             </div>
                             <div class="flex items-center justify-center">
@@ -257,7 +253,6 @@
                                         <button class="bus-set py-2 px-5 lg:px-10 rounded-lg bg-[#0307124D]">B3</button>
                                         <button class="bus-set py-2 px-5 lg:px-10 rounded-lg bg-[#0307124D]">B4</button>
                                     </div>
-
                                 </div>
                             </div>
                             <div class="flex items-center justify-center">
@@ -271,7 +266,6 @@
                                         <button class="bus-set py-2 px-5 lg:px-10 rounded-lg bg-[#0307124D]">C3</button>
                                         <button class="bus-set py-2 px-5 lg:px-10 rounded-lg bg-[#0307124D]">C4</button>
                                     </div>
-
                                 </div>
                             </div>
                             <div class="flex items-center justify-center">
@@ -285,7 +279,6 @@
                                         <button class="bus-set py-2 px-5 lg:px-10 rounded-lg bg-[#0307124D]">D3</button>
                                         <button class="bus-set py-2 px-5 lg:px-10 rounded-lg bg-[#0307124D]">D4</button>
                                     </div>
-
                                 </div>
                             </div>
                             <div class="flex items-center justify-center">
@@ -299,7 +292,6 @@
                                         <button class="bus-set py-2 px-5 lg:px-10 rounded-lg bg-[#0307124D]">E3</button>
                                         <button class="bus-set py-2 px-5 lg:px-10 rounded-lg bg-[#0307124D]">E4</button>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
@@ -335,9 +327,9 @@
                                     <h1 class="font-bold">BDT <span id="total-price">0</span></h1>
                                 </div>
                                 <div id="coupon" class="w-full h-full relative">
-                                    <input disabled id="coupon-input" class="w-full py-5 px-5 rounded-lg" type="text"
+                                    <input id="coupon-input" class="w-full py-5 px-5 rounded-lg" type="text"
                                         placeholder="Have any copupon?">
-                                    <button disabled id="coupon-apply"
+                                    <button id="coupon-apply"
                                         class="absolute right-0 h-full my-auto bg-[#1DD100] px-5 rounded-lg">
                                         Apply
                                     </button>
@@ -396,6 +388,7 @@
 
 
     <script src="JS/app.js"></script>
+    <script src="JS/app2.js"></script>
 
 
 </body>

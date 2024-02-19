@@ -10,6 +10,9 @@ let price = 0;
 // seat seclect function
 for (const busSeat of busSeats) {
   busSeat.addEventListener("click", function (e) {
+    if (count === 4) {
+      document.getElementById("bus-seat").setAttribute("disabled");
+    }
     const targetSeat = e.target;
     targetSeat.style.background = "#1DD100";
     seat--;
@@ -17,7 +20,7 @@ for (const busSeat of busSeats) {
     count++;
     document.getElementById("seat-count").innerText = count;
     const seatNumber = targetSeat.innerText;
-    selectSeat = countSeatNumber.push(seatNumber);
+    countSeatNumber.push(seatNumber);
     price += 550;
 
     document.getElementById("success").removeAttribute("disabled");
@@ -25,11 +28,6 @@ for (const busSeat of busSeats) {
     seatDitels(seatNumber);
     totalPrice("total-price", price);
     totalPrice("grand-total", price);
-
-    if (countSeatNumber.length === 4) {
-      document.getElementById("coupon-input").removeAttribute("disabled");
-      document.getElementById("coupon-apply").removeAttribute("disabled");
-    }
 
     return price;
   });
@@ -67,6 +65,10 @@ document.getElementById("success-card").addEventListener("click", function () {
   document.getElementById("success-card").classList.add("hidden");
 
   document.getElementById("tickit").classList.remove("hidden");
+
+  window.location.reload();
+
+  // document.reload();
 });
 
 function seatDitels(num) {
