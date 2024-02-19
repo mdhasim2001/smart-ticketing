@@ -12,7 +12,6 @@ for (const busSeat of busSeats) {
   busSeat.addEventListener("click", function (e) {
     if (count === 4) {
       alert("Sorry, you can take a maximum of 'Four'");
-
       return;
     }
 
