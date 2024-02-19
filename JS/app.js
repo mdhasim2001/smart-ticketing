@@ -20,6 +20,8 @@ for (const busSeat of busSeats) {
     selectSeat = countSeatNumber.push(seatNumber);
     price += 550;
 
+    document.getElementById("success").removeAttribute("disabled");
+
     seatDitels(seatNumber);
     totalPrice("total-price", price);
     totalPrice("grand-total", price);
@@ -53,6 +55,18 @@ document.getElementById("coupon-apply").addEventListener("click", function () {
   } else {
     alert("Coupon not maching");
   }
+});
+
+document.getElementById("success").addEventListener("click", function () {
+  document.getElementById("success-card").classList.remove("hidden");
+
+  document.getElementById("tickit").classList.add("hidden");
+});
+
+document.getElementById("success-card").addEventListener("click", function () {
+  document.getElementById("success-card").classList.add("hidden");
+
+  document.getElementById("tickit").classList.remove("hidden");
 });
 
 function seatDitels(num) {
