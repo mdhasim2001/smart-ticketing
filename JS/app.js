@@ -11,7 +11,16 @@ let price = 0;
 for (const busSeat of busSeats) {
   busSeat.addEventListener("click", function (e) {
     if (count === 4) {
-      document.getElementById("bus-seat").setAttribute("disabled");
+      alert("Sorry, you can take a maximum of 'Four'");
+
+      return;
+    }
+
+    for (const countSeat of countSeatNumber) {
+      if (countSeat === e.target.innerText) {
+        alert("Sorry, you have already selected");
+        return;
+      }
     }
     const targetSeat = e.target;
     targetSeat.style.background = "#1DD100";
@@ -21,6 +30,7 @@ for (const busSeat of busSeats) {
     document.getElementById("seat-count").innerText = count;
     const seatNumber = targetSeat.innerText;
     countSeatNumber.push(seatNumber);
+
     price += 550;
 
     document.getElementById("success").removeAttribute("disabled");
@@ -28,6 +38,11 @@ for (const busSeat of busSeats) {
     seatDitels(seatNumber);
     totalPrice("total-price", price);
     totalPrice("grand-total", price);
+
+    if (countSeatNumber.length === 4) {
+      document.getElementById("coupon-input").removeAttribute("disabled");
+      document.getElementById("coupon-apply").removeAttribute("disabled");
+    }
 
     return price;
   });
